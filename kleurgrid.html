@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Kleurcode Puzzel - Stap 2</title>
+<style>
+  body { display: flex; flex-direction: column; align-items: center; font-family: sans-serif; background:#f0f0f0; }
+  .hint { margin-bottom: 20px; font-size: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(10, 40px); grid-gap: 4px; }
+  .color-tile { width: 40px; height: 40px; cursor: pointer; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+
+<div class="hint">
+  Klik op het juiste kleurblok!
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script>
+const grid = document.getElementById('grid');
+
+// 100 blokken genereren
+for (let i=0;i<100;i++){
+  const tile = document.createElement('div');
+  tile.className = 'color-tile';
+  const r = Math.floor(Math.random()*256);
+  const g = Math.floor(Math.random()*256);
+  const b = Math.floor(Math.random()*256);
+  tile.style.backgroundColor = `rgb(${r},${g},${b})`;
+  grid.appendChild(tile);
+}
+
+// Correct blok
+const correctIndex = 42;
+const correctTile = grid.children[correctIndex];
+correctTile.style.backgroundColor = 'rgb(65,167,210)';
+correctTile.dataset.correct = "true";
+
+// Klik-event
+Array.from(grid.children).forEach(tile => {
+  tile.addEventListener('click', () => {
+    if(tile.dataset.correct){
+      window.location.href = "eindpagina.html"; // Eindpagina
+    } else {
+      alert("Niet het juiste blok, probeer opnieuw!");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
