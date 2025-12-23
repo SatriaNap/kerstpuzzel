@@ -55,6 +55,9 @@
 <body>
 
 <h2>Lekker bezig, Karin!</h2>
+<p>Gebruik voor dit vraagstuk wederom je brein</p>
+<p>Een stapje dichterbij het eind, o wat fijn</p>
+
 
 <div class="codes">
   #41A7D2<br>
@@ -62,12 +65,12 @@
 </div>
 
 <p>Ik ben een ...?</p>
-<input type="text" id="userInput" placeholder="Vul hier een woord in">
-<button class="submit" id="checkBtn">Controleer</button>
+<input type="text" id="userInput" placeholder="Rara wat ben ik">
+<button id="checkBtn">Controleer</button>
+
 
 <!-- Verstopte hint knop -->
 <button id="hintBtn" title="Extra hint"></button>
-
 <script>
 const correctAnswer = "kleur";
 
@@ -76,7 +79,7 @@ document.getElementById('checkBtn').addEventListener('click', () => {
   if(input === correctAnswer){
     window.location.href = "kleurgrid.html"; // link naar kleurblokpagina
   } else {
-    alert("Dat is niet juist, probeer opnieuw!");
+    alert("Dat is fout Karin, probeer opnieuw!");
   }
 });
 
