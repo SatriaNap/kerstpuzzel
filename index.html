@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>Kleurcode Puzzel - Stap 1</title>
+<title>Digi Karin 2025</title>
 <style>
   body {
     display: flex;
@@ -13,39 +13,54 @@
     font-family: sans-serif;
     background: #f0f0f0;
     text-align: center;
+    position: relative;
   }
-  input {
-    padding: 8px;
-    font-size: 16px;
-    margin-top: 10px;
+  .codes {
+    font-size: 24px;
+    margin: 10px 0;
   }
-  button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 16px;
+  .rijm {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  /* Verstopte hint knop */
+  #hintBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0.3; /* subtiel zichtbaar */
+  }
+  #hintBtn:hover {
+    opacity: 1;
   }
 </style>
 </head>
 <body>
 
-<h1>Raad de juiste kleur!</h1>
-<p>HEX code: <strong>#41A7D2</strong></p>
-<p>RGB code: <strong>rgb(65,167,210)</strong></p>
-<p>Ik ben een ...?</p>
+<h2>Lekker bezig, Karin!</h2>
 
-<input type="text" id="userInput" placeholder="Vul hier een kleur in">
-<button id="checkBtn">Controleer</button>
+<div class="codes">
+  #41A7D2<br>
+  (65,167,210)
+</div>
+
+<div class="rijm">
+  Een hint zo klein, toch fijn, <br>
+  het helpt je op weg, richting iets kleins.
+</div>
+
+<!-- Verstopte hint knop -->
+<button id="hintBtn" title="Extra hint"></button>
 
 <script>
-const correctAnswer = "kleur"; // Antwoord is 'kleur'
-
-document.getElementById('checkBtn').addEventListener('click', () => {
-  const input = document.getElementById('userInput').value.trim().toLowerCase();
-  if(input === correctAnswer){
-    window.location.href = "kleurgrid.html"; // link naar kleurenblok pagina
-  } else {
-    alert("Dat is niet juist, probeer opnieuw!");
-  }
+document.getElementById('hintBtn').addEventListener('click', () => {
+  alert("Tip: Speel eens met lagen, laat het niet vervagen, zoek wat jij in Photoshop zou dragen.");
 });
 </script>
 
