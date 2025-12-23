@@ -65,27 +65,26 @@
 </div>
 
 <p>Ik ben een ...?</p>
+  
 <input type="text" id="userInput" placeholder="Rara wat ben ik">
 <button id="checkBtn">Controleer</button>
 
-
-<!-- Verstopte hint knop -->
 <button id="hintBtn" title="Extra hint"></button>
+
 <script>
 const correctAnswer = "kleur";
 
 document.getElementById('checkBtn').addEventListener('click', () => {
   const input = document.getElementById('userInput').value.trim().toLowerCase();
   if(input === correctAnswer){
-    window.location.href = "kleurgrid.html"; // link naar kleurblokpagina
+    window.location.href = "kleurgrid.html";
   } else {
     alert("Dat is fout Karin, probeer opnieuw!");
   }
 });
 
 document.getElementById('hintBtn').addEventListener('click', () => {
-  alert("Tip: Speel eens met lagen, laat het niet vervagen,
-  Zoek wat jij in Photoshop zou dragen.");
+  alert("Tip: Speel eens met lagen, laat het niet vervagen, Zoek wat jij in Photoshop zou dragen.");
 });
 </script>
 
