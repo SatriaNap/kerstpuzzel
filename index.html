@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Kleurcode Puzzel - Stap 1</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+  }
+  input {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Raad de juiste kleur!</h1>
+<p>HEX code: <strong>#41A7D2</strong></p>
+<p>RGB code: <strong>rgb(65,167,210)</strong></p>
+<p>Ik ben een ...?</p>
+
+<input type="text" id="userInput" placeholder="Vul hier een kleur in">
+<button id="checkBtn">Controleer</button>
+
+<script>
+const correctAnswer = "kleur"; // Antwoord is 'kleur'
+
+document.getElementById('checkBtn').addEventListener('click', () => {
+  const input = document.getElementById('userInput').value.trim().toLowerCase();
+  if(input === correctAnswer){
+    window.location.href = "kleurgrid.html"; // link naar kleurenblok pagina
+  } else {
+    alert("Dat is niet juist, probeer opnieuw!");
+  }
+});
+</script>
+
+</body>
+</html>
