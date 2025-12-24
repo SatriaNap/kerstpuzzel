@@ -3,19 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <title>Kleurcode Puzzel - Eind</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body { display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; background:#f0f0f0; }
-  img { max-width:90%; border:3px solid #ccc; }
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7efe5, #f2d7d5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 520px;
+    background: #ffffffee;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+
+  h1 {
+    color: #8b1e1e;
+    margin-bottom: 15px;
+  }
+
+  .tree {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  img {
+    max-width: 90%;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .rijm {
+    font-size: 16px;
+    color: #8b1e1e;
+    margin-top: 20px;
+    font-style: italic;
+  }
 </style>
 </head>
+
 <body>
+<div class="container">
 
-<div>
+  <div class="tree">🎄</div>
   <h1>Gefeliciteerd!</h1>
-  <p>Een kleine zoektocht, maar zeker niet zwaar</p>
-  <p>Waar iets hangt wat je warm houdt, ligt het klaar.</p>
-  <img src="kleurenjassen.jpeg" alt="Jas hint">
-</div>
 
+  <p>Een kleine zoektocht, maar zeker niet zwaar,</p>
+  <p>Waar iets hangt wat je warm houdt, ligt het klaar.</p>
+
+  <img src="kleurenjassen.jpeg" alt="Jas hint">
+
+  <div class="rijm">
+    Voor al je moeite, scherpte en plezier,<br>
+    Verdien je een knuffel én een warm kerstbier.
+  </div>
+
+</div>
 </body>
 </html>
