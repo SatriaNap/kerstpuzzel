@@ -5,16 +5,23 @@
 <title>Digi Karen 2025</title>
 <style>
   body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7efe5, #f2d7d5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: sans-serif;
-    background: #f0f0f0;
-    text-align: center;
-    position: relative;
     padding: 20px;
+  }
+  
+  .container {
+    max-width: 520px;
+    background: #ffffffee;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
   }
   .codes {
     font-size: 24px;
@@ -53,8 +60,9 @@
 </style>
 </head>
 <body>
+<div class="container">
 
-<h2>Lekker bezig, Karin!</h2>
+<h2>Goed zo! We komen steeds verder</h2>
 <p>Gebruik voor dit vraagstuk wederom je brein</p>
 <p>Een stapje dichterbij het eind, o wat fijn</p>
 
@@ -70,7 +78,7 @@
 <button id="checkBtn">Controleer</button>
 
 <button id="hintBtn" title="Extra hint"></button>
-
+</div>
 <script>
 const correctAnswer = "kleur";
 
