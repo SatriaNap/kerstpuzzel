@@ -86,6 +86,14 @@
     margin-bottom: 8px;
     color: #333;
   }
+    /* Verborgen hint */
+  .hidden-hint {
+    color: #e5ddd5; /* bijna dezelfde kleur als achtergrond */
+    font-size: 12px;
+    margin-top: 10px;
+    user-select: text;
+  }
+
 </style>
 </head>
 
@@ -107,43 +115,13 @@
     <div class="bubble">
       👉 <a href="#">https://www.coolblue-secure.nl/product/954606/philips-airfryer-l-3000-serie-na322-00.html</a>
     </div>
-  </div>
-
-  <div class="footer">
-    <div style="width:100%;">
-      <div class="question">
-        Wat doe je?
-      </div>
-      <input id="answer" placeholder="Typ je antwoord">
+    <div class="hidden-hint">
+      hint: volg de link voor de volgende QR code
     </div>
-    <button onclick="check()">OK</button>
   </div>
 
-</div>
-
-<script>
-  const goodAnswers = [
-    "naam",
-    "aanhef",
-    "mam",
-    "mama",
-    "afzender",
-    "link",
-    "url",
-    "phishing",
-    "verdacht",
-    "nep"
-  ];
-
-  function check() {
-    const input = document.getElementById("answer").value.toLowerCase().trim();
-    if (goodAnswers.some(a => input.includes(a))) {
-      window.location.href = "volgende-puzzel.html";
-    } else {
-      alert("Twijfel is terecht… kijk nog eens goed 😉");
-    }
-  }
 </script>
 
 </body>
 </html>
+
