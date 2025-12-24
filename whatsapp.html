@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nieuw WhatsApp bericht</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #e5ddd5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .phone {
+    max-width: 420px;
+    margin: auto;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    background: #075e54;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #cfd8dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .chat {
+    flex: 1;
+    padding: 15px;
+    background: #dcf8c6;
+  }
+
+  .bubble {
+    background: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    max-width: 85%;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+
+  .bubble a {
+    color: #1a73e8;
+    word-break: break-all;
+  }
+
+  .footer {
+    padding: 10px;
+    background: #f0f0f0;
+    display: flex;
+    gap: 6px;
+  }
+
+  input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .question {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+</style>
+</head>
+
+<body>
+<div class="phone">
+
+  <div class="header">
+    <div class="avatar">D</div>
+    <div>Sandrine</div>
+  </div>
+
+  <div class="chat">
+    <div class="bubble">
+      Hallo Karin,<br><br>
+      Ik ben het, je dochter Sandrine. Ik ben mijn telefoon kwijt dus ik heb snel je hulp nodig.<br>
+      Deze bestelling moet nog worden betaald. Zou jij dat kunnen doen? Het moet vandaag nog. 
+    </div>
+
+    <div class="bubble">
+      👉 <a href="#">https://www.coolblue-secure.nl/product/954606/philips-airfryer-l-3000-serie-na322-00.html</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div style="width:100%;">
+      <div class="question">
+        Wat doe je?
+      </div>
+      <input id="answer" placeholder="Typ je antwoord">
+    </div>
+    <button onclick="check()">OK</button>
+  </div>
+
+</div>
+
+<script>
+  const goodAnswers = [
+    "naam",
+    "aanhef",
+    "mam",
+    "mama",
+    "afzender",
+    "link",
+    "url",
+    "phishing",
+    "verdacht",
+    "nep"
+  ];
+
+  function check() {
+    const input = document.getElementById("answer").value.toLowerCase().trim();
+    if (goodAnswers.some(a => input.includes(a))) {
+      window.location.href = "volgende-puzzel.html";
+    } else {
+      alert("Twijfel is terecht… kijk nog eens goed 😉");
+    }
+  }
+</script>
+
+</body>
+</html>
