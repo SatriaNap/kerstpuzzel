@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerst Speurtocht</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7efe5, #f2d7d5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 520px;
+    background: #ffffffee;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    color: #8b1e1e;
+  }
+
+  .tree {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .poem {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #333;
+  }
+
+  .question {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 16px;
+    width: 85%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 10px 22px;
+    font-size: 16px;
+    background: #8b1e1e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #a32727;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="tree">🎄</div>
+  <h1>Lieve Karin!</h1>
+
+  <div class="poem">
+    Men zegt dat jij digitaal niet te stoppen bent,<br>
+    Een oma die elk knopje en schermpje kent.<br><br>
+    Van apps tot links, jij klikt nooit zomaar mis,<br>
+    Geen online ervaring is voor jou een hindernis.<br><br>
+    Vandaag is het moment om dit te bewijzen,<br>
+    Een speurtocht door het huis, zodat we jou zometeen hopelijk weer kunnen prijzen.<br><br>
+    Dus pak je telefoon, wees klaar en alert,<br>
+    Want wie slim zoekt, vindt straks wat je hart verwarmt.<br><br>
+	Iedereen mag meekijken, groot of klein,<br>
+	Maar zonder jouw seintje moet het stilletjes zijn.
+  </div>
+
+  <div class="question">
+    Ben je klaar voor digitale avontuur?
+  </div>
+
+  <input id="answer" placeholder="Typ je antwoord">
+  <br>
+  <button onclick="check()">Start de speurtocht</button>
+
+</div>
+
+<script>
+  const goodAnswers = [
+   "ja",
+   "natuurlijk",
+   "uiteraard"
+  ];
+
+  function check() {
+    const input = document.getElementById("answer").value.toLowerCase().trim();
+    if (goodAnswers.some(a => input.includes(a))) {
+      window.location.href = "whatsapp-dochter.html";
+    } else {
+      alert("Zeker weten? Dit kan je wel toch?");
+    }
+  }
+</script>
+
+</body>
+</html>
