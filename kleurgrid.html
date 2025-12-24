@@ -43,9 +43,9 @@ correctTile.dataset.correct = "true";
 Array.from(grid.children).forEach(tile => {
   tile.addEventListener('click', () => {
     if(tile.dataset.correct){
-      window.location.href = "eindpagina.html"; // Eindpagina
+      window.location.href = "eindpagina.html";
     } else {
-      alert("Niet het juiste blok, probeer opnieuw!");
+      alert("Niet de juiste, probeer opnieuw!");
     }
   });
 });
