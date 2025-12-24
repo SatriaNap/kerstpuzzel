@@ -3,21 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <title>Kleurcode Puzzel - Stap 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body { display: flex; flex-direction: column; align-items: center; font-family: sans-serif; background:#f0f0f0; }
-  .hint { margin-bottom: 20px; font-size: 18px; }
-  .grid { display: grid; grid-template-columns: repeat(10, 40px); grid-gap: 4px; }
-  .color-tile { width: 40px; height: 40px; cursor: pointer; border: 1px solid #ccc; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7efe5, #f2d7d5);
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 520px;
+    width: 100%;
+    background: #ffffffee;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+
+  .tree {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .hint {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 4px;
+    justify-content: center;
+  }
+
+  .color-tile {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: transform 0.1s;
+  }
+
+  .color-tile:hover {
+    transform: scale(1.1);
+    border-color: #8b1e1e;
+  }
 </style>
 </head>
+
 <body>
+<div class="container">
 
-<div class="hint">
-  Veel blokjes te zien, één houdt de sleutel klaar,
-  Vind hem goed, dan gaat het verder, echt waar.
+  <div class="tree">🎄</div>
+  <div class="hint">
+    Veel blokjes te zien, één houdt de sleutel klaar,<br>
+    Vind hem goed, dan gaat het verder, echt waar.
+  </div>
+
+  <div class="grid" id="grid"></div>
+
 </div>
-
-<div class="grid" id="grid"></div>
 
 <script>
 const grid = document.getElementById('grid');
@@ -43,7 +98,7 @@ correctTile.dataset.correct = "true";
 Array.from(grid.children).forEach(tile => {
   tile.addEventListener('click', () => {
     if(tile.dataset.correct){
-      window.location.href = "eindpagina.html";
+      window.location.href = "eind.html"; // link naar de kerst-eindpagina
     } else {
       alert("Niet de juiste, probeer opnieuw!");
     }
